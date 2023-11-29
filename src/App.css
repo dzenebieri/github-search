@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 14px;
+  overflow: hidden;
+  line-height: 21px;
+  color: rgb(240, 243, 246);
+  background-color: rgb(10, 12, 16);
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(113, 183, 255);
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+}
+
+button:hover {
+  opacity: .7;
+}
+
+header {
+  height: 64px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(1, 4, 9);
+  box-shadow: rgb(122, 130, 142) 0px -1px 0px 0px inset;
+}
+
+header a {
+  height: 32px;
+}
+
+header svg path {
+  fill: rgb(240, 243, 246);
+}
+
+search input {
+  top: 16px;
+  right: 16px;
+  height: 32px;
+  width: 280px;
+  padding: 0 32px;
+  border-radius: 6px;
+  position: absolute;
+  color: rgb(240, 243, 246);
+  border: 1px solid rgb(122, 130, 142);
+}
+
+search input::placeholder {
+  color: rgb(158, 167, 179);
+}
+
+search input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+search button {
+  top: 16px;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  fill: rgb(240, 243, 246);
+}
+
+search button svg {
+  top: 1px;
+  position: relative;
+}
+
+search button:first-child {
+  right: 264px;
+}
+
+search button:last-child {
+  right: 16px;
+}
+
+.userCS {
+  padding: 16px 0;
+  font-size: 20px;
+}
+
+.ul {
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  height: 453px;
+  display: flex;
+  border-radius: 6px;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  background-color: rgb(1, 4, 9);
+  border: 1px solid rgb(122, 130, 142);
+}
+
+.ul ul {
+  gap: 4px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 53px;
+  flex-direction: column;
+}
+
+.ul li {
+  display: flex;
+  padding-top: 4px;
+  justify-content: center;
+}
+
+.ul img {
+  width: 115px;
+  height: 115px;
+  border-radius: 50% !important;
+  border: 1px solid transparent;
+  outline: 1px solid rgb(122, 130, 142);
+  box-shadow: rgba(255, 255, 255, 0.9) 0px 0px 0px 1px;
+}
+
+.ul svg path {
+  fill: rgb(240, 243, 246);
+}
+
+.ul a span {
+  font-weight: 600;
+}
+
+.ul div {
+  gap: 8px;
+  display: flex;
+}
+
+.ul div:nth-of-type(2) svg {
+  top: 4px;
+  position: relative;
+}
+
+.ul li div {
+  bottom: 0;
+  width: 100%;
+  padding: 16px 0;
+  position: absolute;
+  justify-content: center;
+  border-top: 1px solid rgb(122, 130, 142);
+
+}
+
+.ul li div span {
+  gap: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.Message .bg {
+  width: 100%;
+  height: 370px;
+}
+
+.Message div {
+  left: 40px;
+  top: 114px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+}
+
+.Message div span:last-child {
+  top: 230px;
+  left: 240px;
+  position: absolute;
+}
+
+.Message p {
+  gap: 4px;
+  display: flex;
+  margin-top: 40px;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer {
+  gap: 8px;
+  bottom: 0;
+  width: 100%;
+  height: 64px;
+  padding: 16px;
+  display: flex;
+  font-size: 12px;
+  position: absolute;
+  align-items: center;
+  color: rgb(240, 243, 246);
+  background-color: rgb(1, 4, 9);
+  box-shadow: rgb(122, 130, 142) 0px +1px 0px 0px inset;
+}
+
+footer a {
+  height: 24px;
+}
+
+footer svg path {
+  fill: rgb(158, 167, 179);
+}
+
+footer svg:hover path {
+  fill: rgb(240, 243, 246);
+}
+
+@media screen and (max-width: 450px) {
+  .Message p {
+    margin-top: 4px;
+  }
+
+  .Message div {
+    top: -4px;
+    left: 40px;
+    flex-direction: column;
+  }
+
+  .Message div span:first-child {
+    position: absolute;
+    bottom: -240px;
+    left: 40px;
+  }
+
+  .Message div span:first-child img {
+    width: 94px;
+  }
+
+  .Message div span:nth-child(2) {
+    position: relative;
+    bottom: -180px;
+    left: 40px;
+  }
+
+  .Message div span:nth-child(2) img {
+    width: 88px;
+  }
+
+  .Message div span:last-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  search input {
+    width: 192px;
+  }
+
+  search button:first-child {
+    right: 176px;
+  }
+}
